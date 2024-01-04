@@ -1,32 +1,29 @@
-﻿
-using Microsoft.IdentityModel.Tokens;
+﻿using Microsoft.IdentityModel.Tokens;
 using System.Security.Cryptography;
 
-namespace AuthServer.Web
+namespace AuthServer.Web;
+
+public class DevelopmentKeys
 {
-    public class DevelopmentKeys
+    public DevelopmentKeys(
+        IHostEnvironment env
+    )
     {
-        public DevelopmentKeys(
-            IWebHostEnvironment env
-            
-            )
+        RsaKey = RSA.Create();
+        var path = Path.Combine(env.ContentRootPath, "crypto_key");
+
+        if (File.Exists(path))
         {
-            RsaKey = RSA.Create();
-            var path = Path.Combine(env.ContentRootPath, "crypto_key");
-
-            if (File.Exists(path))
-            {
-                var rsaKey = RSA.Create();
-                rsaKey.ImportRSAPrivateKey(File.ReadAllBytes(path),out _);
-            }
-            else
-            {
-                var privateKey = RsaKey.ExportRSAPrivateKey();
-                File.WriteAllBytes(path, privateKey);
-            }
+            var rsaKey = RSA.Create();
+            rsaKey.ImportRSAPrivateKey(File.ReadAllBytes(path), out _);
         }
-
-        public RSA RsaKey { get; private set; }
-        public RsaSecurityKey RsaSecurityKey => new RsaSecurityKey(RsaKey);
+        else
+        {
+            var privateKey = RsaKey.ExportRSAPrivateKey();
+            File.WriteAllBytes(path, privateKey);
+        }
     }
+
+    private RSA RsaKey { get; set; }
+    private RsaSecurityKey RsaSecurityKey => new(RsaKey);
 }

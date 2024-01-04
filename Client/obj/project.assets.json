@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Rahiyan\\Downloads\\Auth-Server\\Client\\Client.csproj",
+      "projectUniqueName": "D:\\RiderProjects\\Auth-Server\\Client\\Client.csproj",
       "projectName": "Client",
-      "projectPath": "C:\\Users\\Rahiyan\\Downloads\\Auth-Server\\Client\\Client.csproj",
+      "projectPath": "D:\\RiderProjects\\Auth-Server\\Client\\Client.csproj",
       "packagesPath": "C:\\Users\\Rahiyan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Rahiyan\\Downloads\\Auth-Server\\Client\\obj\\",
+      "outputPath": "D:\\RiderProjects\\Auth-Server\\Client\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Rahiyan\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -26,7 +26,6 @@
         "net7.0"
       ],
       "sources": {
-        "C:\\Users\\Rahiyan\\.dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -55,6 +54,24 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[7.0.14, 7.0.14]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[7.0.14, 7.0.14]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[7.0.14, 7.0.14]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[7.0.14, 7.0.14]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -63,7 +80,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\Rahiyan\\.dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

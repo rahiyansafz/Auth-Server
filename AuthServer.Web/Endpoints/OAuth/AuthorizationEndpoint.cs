@@ -8,10 +8,8 @@ internal class AuthorizationEndpoint
     internal static IResult Handler(
         HttpRequest request,
         IDataProtectionProvider dataProtectionProvider
-        
-        )
+    )
     {
-
         request.Query.TryGetValue("response_type", out var responseType);
         request.Query.TryGetValue("client_id", out var clientId);
         request.Query.TryGetValue("code_challenge", out var codeChallenge);
@@ -31,11 +29,9 @@ internal class AuthorizationEndpoint
             Expiry = DateTime.Now.AddMinutes(5)
         };
 
-
         var dataCode = protector.Protect(JsonSerializer.Serialize(code));
 
-
         return Results.Redirect($"{redirectUri}?code={dataCode}&" +
-            $"state={state}&iss={HttpUtility.UrlEncode("https://localhost:7013")}");
+                                $"state={state}&iss={HttpUtility.UrlEncode("https://localhost:7013")}");
     }
 }

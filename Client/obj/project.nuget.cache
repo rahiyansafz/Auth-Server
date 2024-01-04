@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "ctOgQMUtfGZE5URaAg9ix1AzdBPhqP/Kzniv+g0DN/nMtekTw5tnHyNZeq4L7c1LYYZAa5j7lNUMebpeyL16rg==",
+  "dgSpecHash": "ataw7UquJbDmJFDtwXg5jWYtVwbshuhQKI1VvzGRnSPVvgk0Mb3MfhWSrPsKekOg11KjdQi+aIVtxPGKDdiXDQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Rahiyan\\Downloads\\Auth-Server\\Client\\Client.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "D:\\RiderProjects\\Auth-Server\\Client\\Client.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Rahiyan\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.14\\microsoft.netcore.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\Rahiyan\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.14\\microsoft.windowsdesktop.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\Rahiyan\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.14\\microsoft.aspnetcore.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\Rahiyan\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.14\\microsoft.netcore.app.host.win-x64.7.0.14.nupkg.sha512"
+  ],
   "logs": []
 }
